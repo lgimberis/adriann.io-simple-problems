@@ -8,8 +8,7 @@ template<typename T>
 T squareFunc(T t){
   return t*t;
 }
-template<typename T, template<typename,typename=std::allocator<T>
-															> typename C, T (*onAllFunc)(T)>
+template<typename T, template<typename,typename=std::allocator<T>> typename C, T (*onAllFunc)(T)>
 void on_all(C<T>& c){
   for(T& t: c)
     t=onAllFunc(t);
